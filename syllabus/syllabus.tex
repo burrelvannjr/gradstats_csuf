@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry} %change all margins to 1.0 inches (except the title, but moves up)
+%\documentclass[12pt]{article}
+%\usepackage[margin=.8in]{geometry} 
+%\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage{hyperref} %allow for hyper links
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage[T1]{fontenc} %add encoding for small caps
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+\usepackage{titling} %title margin editing
+\setlength{\droptitle}{-.75in} %size of top margin
+\usepackage{setspace}
+\usepackage{changepage} %changes margins using adjustwidth
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage[super]{nth}
+\usepackage{paralist} %to use compact item stuff
+\makeatletter
+\newcommand\tabfill[1]{%
+\dimen@\linewidth%
+\advance\dimen@\@totalleftmargin%
+\advance\dimen@-\dimen\@curtab%
+\parbox[t]\dimen@{\raggedright #1\ifhmode\strut\fi}%
+}
+%%%%below changes footer to special footer with name and page number
+\usepackage{fancyhdr}
+\pagestyle{fancy} %can be {fancy}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+%%%%above changes footer to special footer with name and page number
+\begin{document}
+%\date{today}
+%\maketitle
+
+\begingroup  
+  \centering
+  \begin{spacing}{1.5} %begins 1.5 spacing
+  \textsc{\textbf{\LARGE{Graduate Statistics}}} %textsc is small caps, textbf is bold font, huge is largest font possible
+  \end{spacing}
+  \begin{spacing}{1.0} %begins single-spacing
+  \centerline{\large Sociology 502B}
+  \centerline{\large Fall 2017}
+  %\centerline{\normalsize bvann@uci.edu \textbullet \space (714) 398-5815 \textbullet \space \href{http://www.burrelvannjr.com}{burrelvannjr.com}}
+  \end{spacing}
+\endgroup
+\raggedright %left-justifies text AKA does not justify all of text
+
+
+%\begingroup %date group start
+  %за\centerline{} %line space
+  %\centerline{} %line space
+   %\centerline{( {\it{\today}} )} %today's date, italicized with parentheses
+%\endgroup %end date group
+
+%\begin{singlespace}
+%use the escape character when a bad one... \ 
+%https://stackoverflow.com/questions/2894710/how-to-write-urls-in-latex
+Time: \textbf{W: 7:00pm--9:45pm} \hfill  \hfill Instructor: \textbf{Burrel Vann Jr} \\
+Room: \textbf{H--326A} \hfill  \hfill Email: \textbf{bjvann@fullerton.edu} \\
+Website: \textbf{\href{https://moodle-2017-2018.fullerton.edu/course/view.php?id=31581}{SOCI 502B}} \hfill  \hfill Office: \textbf{CP--929} \\
+  \hfill  \hfill Office Hours: \textbf{M\&W: 3:00pm--4:00pm} \\
+%\end{singlespace}
+
+
+%\begin{singlespace}
+\section*{Course Description}
+Statistics is a ``language'' that can be used to describe social phenomena. When we talk about how things vary or relate to one another, we are talking about the relationship between two or more aspects of society. In quantitative (statistical) work, these aspects are known as variables. This course will provide students with the skills necessary for understanding, interpreting and drawing conclusions from statistical analysis of data. We will cover univariate, bivariate, and multivariate statistics including: probability and the normal curve; measures of central tendency, variation/dispersion, and confidence intervals; comparing means and proportions for two groups (t-tests); comparing means for more than two groups (ANOVA); correlation, and regression (OLS and Logistic). Students will conduct statistical analyses in SPSS. Importantly, given the growing use of open-source programs, and the increasing demand for programming skills, students \textit{may} be asked to duplicate their statistical analyses in the program RStudio.
+%%\end{singlespace}
+
+%\begin{singlespace}
+\section*{Course Objectives}
+\begin{itemize}
+\item To understand the application of statistics to quantitative data to answer social science questions.\vspace*{-.75em}
+\item To gain statistical analysis skills using SPSS (and R).\vspace*{-.75em}
+\item To develop skills that are transferrable to other statistical software platforms (including R, STATA, Python, and SAS). \vspace*{-.75em}
+\item To be able to interpret statistical results and clearly communicate conclusions
+\end{itemize}
+
+
+\section*{Course Materials}
+\subsection*{Required}
+\textbf{Textbook} \newline
+Field, Andy. 2012. \textit{Discovering Statistics Using IBM SPSS Statistics}. \nth{4} Edition. Thousand Oaks, CA: SAGE Publications, Inc. \newline
+
+\textbf{Calculator} \newline
+You will need a basic calculator that can do basic functions (including add, subtract, multiply, divide, and square root). It does not need to be a graphing calculator. You will want to bring both your book and calculator to class everyday. 
+
+\subsection*{Recommended (Not Required)}
+\textbf{R/RStudio} \newline
+It is recommended that students, especially those seeking extra credit and those wanting to build their programming repertoire, download the R and RStudio programs on their home computers.
+
+
+
+
+\section*{Course Requirements}
+Students are required to attend all class meetings and participate in discussions, and turn in homework assignments and in-class exercises.\newline
+
+\textbf{Participation (50 points):} \newline
+Your participation grade is dependent upon your attendance and participation in in-class assessments. Attendance for this class is critical for your overall success in the course. If you miss a class meeting, look on the course website for material you may have missed. Second, if you find it difficult to understand some of the material, get in contact with your one or more of your classmates via Titanium. Third, if you still find it difficult, set aside time to meet with me in office hours. If my office hours don't work, email me so that we can schedule a time to meet. \newline
+
+\textbf{In-Class Exercises - ICE (100 Points, 10 points each)} \newline
+This class includes ten in-class exercises designed to help you grasp statistical methods in a practical way by both applying the techniques and by understanding their use in empirical work. Therefore, ICEs will consist of analyses conducted in SPSS, brief interpretation of these analyses, or interpretation/explanation of analyses found in empirical work. ICEs serve as an exercise for that class session only. These are short exercises that will be available at the beginning of class and due by the end of the class (unless otherwise noted). No late ICEs will be accepted. \newline
+
+\textbf{Homework (70 Points, 10 points each)} \newline
+There are seven homework assignments which build on the ICEs (and can be thought of as longer ICEs). These homework assignments will consist of analyses conducted in SPSS . All homework assignments will be submitted as a portfolio on the day of the final. Any portfolio not submitted by the close of the Final Exam Date window will not be given credit. \newline
+
+\textbf{Final Presentation - Data \& Method and Results (15 points)} \newline
+Throughout the semester, we will be working with one or more data sets in order to conduct statistical analyses. In the final weeks of the course, students will be given the opportunity to present the Data \& Methods section and Results section of their final research papers. Students should treat the presentation like a brief, 5-10 minute conference talk (e.g. present the research question being answered, provide 1-2 theoretically-driven reasons why this is an important question and why certain variables -- those which just so happen to be in the data set used -- help you answer that question, then present the data source, the variables used, the method applied, and finally present and interpret the results along with an explanation for how you answered your research question). \newline
+
+
+\textbf{Final Paper - Data \& Methods and Results Section (15 points)} \newline
+The final paper is only the Data \& Methods section and Results section of an empirical paper - a paper based on the multivariate statistical analysis of a data set introduced/used in this class. In 3-5 pages, students will ``restate'' their research question; describe the data set (it's source, number of observations, the questions used for the analysis, any manipulation to variables or missingness in the data); describe the dependent variable(s), the key independent variables, and control variables; the multivariate method used to answer the research question; followed by explanation and interpretation of the results of the analysis. The paper should conclude with a brief discussion/conclusion of the implications of the findings. This final paper is due (electronically) on the day of the final. Any final paper not submitted by the close of the Final Exam Date window will not be given credit. \newline
+
+
+
+\textbf{Extra Credit} \newline
+Students may be given the opportunity to complete one additional homework assignment for extra credit, worth a maximum of 10 points. If granted, extra credit will be accepted on the day of the final.  
+
+\section*{Grading Breakdown}
+Final grades will be based on ten in-class exercises, seven homework assignments, one final presentation, one final paper, and participation for a total of 250 points. A +/- grading system will not be used.
+
+\begin{tabbing}
+\quad \quad \quad \= Participation \quad \quad \quad \= \tabfill{50}\\
+\> In-Class Exercises \> \tabfill{100}\\
+\> Homework \> \tabfill{70 (7 assignments, 10 points each)}\\
+\> Final Presentation \> \tabfill{15}\\
+\> Final Paper \> \tabfill{15}\\
+\> Total  \> \tabfill{250}
+\end{tabbing}
+
+\textbf{Letter Grades}
+\vspace*{-.5em}
+\begin{tabbing}
+\quad \quad \quad \= A = 90\% and above \\
+\> B = 80\% and above \\
+\> C = 70\% and above \\
+\> D = 60\% and above \\
+\> F = Below 60\% \\
+\end{tabbing}
+
+\section*{Classroom Conduct}
+Please be courteous to your classmates and me by remaining engaged and respectful. Students are expected to conduct themselves in a way that does not interfere with the educational experience of others. Additionally, turn cell phones and other electronic devices on silent during class time. Laptops may be used for taking notes or running analyses while in class.
+
+
+\section*{Academic Dishonesty}
+The California State University, Fullerton policy on academic integrity is explained in \href{http://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{University Policy Statement 300.021}. All work you turn in, including homework assignments, exams, and quizzes must be your own.
+
+\section*{Students with Special Needs}
+Please inform the instructor during the first week of classes about any disability or special needs that you may have that may require specific arrangements related to attending class sessions, carrying out class assignments, or writing papers or examinations. According to California State University policy, students with disabilities must document their disabilities at the Disability Support Services (DSS) Office in order to be accommodated in their courses. Additional information can be found at the \href{http://www.fullerton.edu/dss/}{DSS website}, by calling 657-278-3112, or by email at dsservices@fullerton.edu.
+
+\section*{Changes to Material}
+I reserve the right to make changes to the syllabus, including the course outline, at any time, based on the pace of the class.
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\section*{Course Schedule}
+
+\subsection*{\underline{Review, Univariate Statistics, and the SPSS Environment} \newline}
+
+\subsubsection*{1 - \textit{Introductions; Why We Use Statistics}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  variable types, validity and reliability, error types, research methods, variation
+\item \textbf{Chapter(s)}: 1 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{2 - \textit{Why We Use Statistics / Review of Univariate Statistics}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  frequency distributions, skewness and kurtosis, central tendency, dispersion, the normal distribution
+\item \textbf{Chapter(s)}: 1
+\end{itemize} 
+
+\vspace{3pt}
+
+\subsubsection*{3 - \textit{Univariate Statistics Continued; Answering Research Questions with Statistics}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  logic of research problems/questions, statistical modeling, sampling, confidence intervals, hypothesis testing, Type-I \& Type-II error, significance 
+\item \textbf{Chapter(s)}: 1 \& 2 
+\item \textbf{ICE}:  1 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{4 - \textit{SPSS Environment; Graphing Univariate/Bivariate Data}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  introduction to SPSS, how to think about data, graphical representations of data
+\item \textbf{Chapter(s)}: 3 \& 4 
+\item \textbf{ICE}:  2
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{5 - \textit{Basic Assumptions for Data}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  bivariate and multivariate assumptions for data, distributions, normality, heteroskedasticity, independence, bias
+\item \textbf{Chapter(s)}: 5 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsection*{\underline{Bivariate Statistics}\newline}
+
+\subsubsection*{6 - \textit{Chi Square ($X^2$)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal model, diagnostics, assumptions
+\item \textbf{Chapter(s)}:  18 
+\item \textbf{ICE}:  3 
+\item  \textbf{HW}:  1 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{7 - \textit{T-Test ($t$)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal model, diagnostics, assumptions
+\item \textbf{Chapter(s)}:  9 
+\item \textbf{ICE}:  4 
+\item \textbf{HW}:  2  %include graph compononent
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{8 - \textit{ANOVA: Analysis of Variance ($F$)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  one-way ANOVA formal model, diagnostics, assumptions, RMANOVA, ``a priori'' and planned comparison, orthogonal contrasts, post-hoc tests
+\item \textbf{Chapter(s)}:  11 
+\item \textbf{ICE}:  5 
+\item \textbf{HW}:  3  %include graph compononent
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{9 - \textit{Correlation ($r$)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal model, diagnostics, assumptions
+\item \textbf{Chapter(s)}:  7 
+\item \textbf{ICE}:  6 
+\item \textbf{HW}:  4 %include graph compononent
+\end{itemize}
+
+\vspace{3pt}
+
+\subsection*{\underline{Multivariate Statistics}\newline}
+
+\subsubsection*{10 - \textit{OLS/Linear Regression}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal model, diagnostics, assumptions
+\item \textbf{Chapter(s)}:  8 
+\item \textbf{ICE}:  7 
+\item \textbf{HW}:  5 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{11 - \textit{OLS/Linear Regression Continued}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  mediation \& moderation, suppression, model fit, multicollinearity, effect/dummy coding, ANOVA comparison
+\item \textbf{Chapter(s)}:  10 
+\item \textbf{ICE}:  8 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{12 - \textit{Logistic Regression (Binary)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal models, diagnostics, assumptions
+\item \textbf{Chapter(s)}:  19 
+\item \textbf{ICE}:  9 
+\item \textbf{HW}:  6 
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{13 - \textit{Logistic Regression (Ordered/Ordinal, Multinomial)}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  formal models, diagnostics, assumptions
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{14 - NO CLASS: Fall/Thanksgiving Break \\} 
+
+\vspace{3pt}
+
+\subsection*{\underline{Advanced Multivariate Statistics Topics } \newline}
+
+\subsubsection*{15 - \textit{Factor Analysis; Reliability}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  exploratory factor analysis, confirmatory factor analysis, reliability - Cronbach's Alpha ($\alpha$) and interrater
+\item \textbf{Chapter(s)}:  17 
+\item \textbf{ICE}:  10  
+\item \textbf{HW}:  7 
+\end{itemize} 
+
+\vspace{3pt}
+
+\subsubsection*{16 - \textit{Final Presentations}\newline}
+
+\vspace{3pt}
+
+\subsubsection*{?? - \textit{Count Models, Time-Series, Multilevel Modeling, Structural Equation Modeling}}
+\begin{itemize}
+\item \textbf{Topic(s)}:  general discussion of additional regression-based models: Poisson, negative binomial, event history/survival, time-series, multilevel modeling (linear and logistic MLM), structural equation modeling
+\end{itemize}
+
+\vspace{3pt}
+
+\subsubsection*{Finals Week}
+\begin{itemize}
+\item \textbf{Due}: Homework Portfolio (HW 1-8)
+\item \textbf{Due}: Final Paper (Data \& Methods, Results)
+\end{itemize}
+
+
+
+\end{document}

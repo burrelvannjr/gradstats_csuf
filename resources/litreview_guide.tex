@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{hanging}
+\usepackage[english]{babel}
+\usepackage[semicolon,round]{natbib} %separates each citation by a comma
+%\usepackage[numbers]{natbib} %uses numbers instead of text
+\setcitestyle{notesep={:}} %page number separator is semicolon instead of a comma
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} %hyperref package, also colorlinks and citecolor adds colored citations to text. urlcolor adds colored urls to text, linkcolor changes colors of footnotes.
+\usepackage{amssymb,amsmath,tabu}
+\usepackage{dcolumn}%for stata to LaTeX column alignment for tables.
+%\usepackage{booktabs}%for stata to LaTeX vertical spacing (between hlines and coefficients) alignment for tables.
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+%\usepackage[]{figcaps}
+\usepackage{hanging}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{ltxtable}
+\usepackage{pdflscape}%landscape pages
+\newcommand{\ccc}[1]{\citealt{#1}} %use this to make a new citealt or any other command
+\usepackage[T1]{fontenc} %add encoding for small caps
+\newlength{\saveparindent} %allows you to use \RaggedRight with paragraph indents below
+\setlength{\saveparindent}{\parindent}%allows you to use \RaggedRight with paragraph indents below
+\raggedright%allows you to use \RaggedRight with paragraph indents below
+\setlength{\parindent}{\saveparindent}%allows you to use \RaggedRight with paragraph indents below
+\usepackage{etoolbox}
+%\usepackage[figures,tables]{endfloat}
+\urlstyle{same}%keeps url font the same LaTeX font, and not fixed width/courier new
+%\usepackage[justification=justified,singlelinecheck=false]{caption}
+\usepackage{parskip}
+
+%below lines are to make headers single spaced
+\makeatletter
+\pretocmd{\@sect}{\singlespacing}{}{}
+\pretocmd{\@ssect}{\singlespacing}{}{}
+\apptocmd{\@sect}{\doublespacing}{}{}
+\apptocmd{\@ssect}{\doublespacing}{}{}
+\makeatother
+%above lines are to make headers single spaced
+
+\begin{document}
+\title{\begin{singlespace}Developing a Literature Review\end{singlespace}}
+\author[]{Rory McVeigh
+\thanks{prepared by Burrel Vann Jr}
+}
+\doublespacing
+\date{}
+\maketitle
+
+
+
+\begin{abstract}
+\begin{singlespace}
+The primary goal of this outline is to help you develop a literature review/theory section for a research paper. This exercise should resemble the ``literature review'' section of a research article that you might find in a good academic journal such as the {\it{American Sociological Review}}, the {\it{American Journal of Sociology}}, or {\it{Social Forces}}. Take your time and give careful consideration to the complexities of your research question. Organize your thinking and your writing. Try to imagine the empirical test that you would actually perform if you were to complete the research project.
+\end{singlespace}
+\end{abstract}
+\newpage
+
+
+
+\section{{\textbf{Remind the reader of your research question, in the form of hypotheses}}}
+\begin{singlespace}
+You should transform the question into a hypothesis (I am specifying a direction for the relationships). A statement such as this sets your agenda in terms of what you will have to accomplish in this section of your paper. You will need to use the academic literature to develop a theoretical argument that leads to the hypothesis that you made in your opening statement.
+\begin{itemize}
+\item As discussed above, this paper examines the relationship between opposition to same-sex marriage, as expressed through ballot initiative voting, and the crime rate. I consider the possibility that opposition to gay marriage tends to be highest in communities characterized by high crime rates, but only when these same communities are also characterized by traditional family structure and gender roles.
+\end{itemize}
+\end{singlespace}
+
+\section{{\textbf{Use relevant literature to discuss the hypothesis you developed}}}
+\begin{singlespace}
+Don't simply provide a summary of articles and books that you have read. Everything that you write should be helping you to move toward your goal and the goal is to provide a logical argument that supports the hypothesis that you are making. Therefore, you need to first determine what literature is relevant for your particular question and then you need to show the reader how it is relevant.
+
+A common mistake that students make is using the ``listing'' approach when discussing the literature. In other words, they might start by writing something like ``The first theory I will discuss is ethnic competition theory (followed by summary of the theory)... the second theory is internal colonialism...'' That approach is very, very ineffective. Remember to keep your discussion focused on your question. Draw out the logic embedded in various theories and consider the extent to which that logic is useful to you in solving your own puzzle.
+
+Don't assume that the reader is already familiar with the work that you will be citing. Part of your job is to ``review'' - so you need to make the reader familiar with the relevant content that you are pulling out of the literature. But again, in addition to reviewing the literature you need to be applying it to your question.
+\end{singlespace}
+
+
+\section{{\textbf{Don't use the literature to ``test'' your argument}}}
+\begin{singlespace}
+Your goal is NOT to use the literature to ``test'' your argument or to show that your hypothesis is correct. For example, let's say that your hypothesis is that people with higher levels of education are less likely than other people to express overtly racist attitudes... and then you use the literature to show that you are right. If you are able to do that, {\it{you need a new research question}} because you would not be contributing anything new to the literature. Ideally, you are advancing a research question that will contribute something new to our understanding of racial conflict (or some related topic), so you shouldn't be able to find the answer to your question in the literature. But you should be able to use the literature to construct a logical argument about what we {\it{should}} expect to find when you put your hypothesis to an empirical test.
+\end{singlespace}
+
+
+\section{{\textbf{Introduce theoretical tension into your literature review}}}
+\begin{singlespace}
+Also keep in mind that a good literature review/theory section contains theoretical tension. Your article or research project is not going to interest an academic audience if it is hard to imagine an outcome that is different from the one that you are predicting. As you are developing this section of your paper it is almost always a good idea to call attention to ideas that can be found in the literature that could be used to develop a plausible counter-argument to the argument that you are making. If it turns out that the data support your argument, then your paper will be perceived as being more important because you identified something about social relationships that is not obvious, even to an academic audience. 
+\end{singlespace}
+
+
+\end{document}

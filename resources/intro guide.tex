@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{hanging}
+\usepackage[english]{babel}
+\usepackage[semicolon,round]{natbib} %separates each citation by a comma
+%\usepackage[numbers]{natbib} %uses numbers instead of text
+\setcitestyle{notesep={:}} %page number separator is semicolon instead of a comma
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} %hyperref package, also colorlinks and citecolor adds colored citations to text. urlcolor adds colored urls to text, linkcolor changes colors of footnotes.
+\usepackage{amssymb,amsmath,tabu}
+\usepackage{dcolumn}%for stata to LaTeX column alignment for tables.
+%\usepackage{booktabs}%for stata to LaTeX vertical spacing (between hlines and coefficients) alignment for tables.
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+%\usepackage[]{figcaps}
+\usepackage{hanging}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{ltxtable}
+\usepackage{pdflscape}%landscape pages
+\newcommand{\ccc}[1]{\citealt{#1}} %use this to make a new citealt or any other command
+\usepackage[T1]{fontenc} %add encoding for small caps
+\newlength{\saveparindent} %allows you to use \RaggedRight with paragraph indents below
+\setlength{\saveparindent}{\parindent}%allows you to use \RaggedRight with paragraph indents below
+\raggedright%allows you to use \RaggedRight with paragraph indents below
+\setlength{\parindent}{\saveparindent}%allows you to use \RaggedRight with paragraph indents below
+\usepackage{etoolbox}
+%\usepackage[figures,tables]{endfloat}
+\urlstyle{same}%keeps url font the same LaTeX font, and not fixed width/courier new
+%\usepackage[justification=justified,singlelinecheck=false]{caption}
+\usepackage{parskip}
+
+%below lines are to make headers single spaced
+\makeatletter
+\pretocmd{\@sect}{\singlespacing}{}{}
+\pretocmd{\@ssect}{\singlespacing}{}{}
+\apptocmd{\@sect}{\doublespacing}{}{}
+\apptocmd{\@ssect}{\doublespacing}{}{}
+\makeatother
+%above lines are to make headers single spaced
+
+\begin{document}
+\title{\begin{singlespace}Strong Research Questions and Introductions to Research Articles\end{singlespace}}
+\author[]{Rory McVeigh
+\thanks{prepared by Burrel Vann Jr}
+}
+\doublespacing
+\date{}
+\maketitle
+
+
+
+\begin{abstract}
+\begin{singlespace}
+The primary goal of this outline is to help you develop an original research question. In terms of both style and content, this exercise should resemble the ``introduction'' section of a research article that you might find in a good academic journal such as the {\it{American Sociological Review}}, the {\it{American Journal of Sociology}}, or {\it{Social Forces}}. Research papers, especially their introduction sections, should not be written ``off the top of your head.''
+\end{singlespace}
+\end{abstract}
+\newpage
+
+
+
+\section{{\textbf{Clearly articulated statement of your research question}}}
+\begin{singlespace}
+Keep in mind that your question is a question about causal relationships among variables. This should be phrased as such: {\it{does variation in Y depend on variation in X}}? An example from a \href{http://asr.sagepub.com/content/79/4/630.full.pdf}{recent paper} is below:
+\begin{itemize}
+\item Does variation in county-level presence of Tea Party organizations depend on variation in residential segregation by education levels
+\end{itemize}
+
+Note that you do not need to operationalize your variables in this section (that would come later in the paper in the data and methods section and is, therefore, not part of this assignment). Take a considerable amount of time developing a good question before you begin your work. Remember, you are looking to set up both an academic and a substantive puzzle. A good puzzle does not have an obvious solution. And remember to be very clear about what are your dependent and independent variable(s), and your units of analysis. You can start with a question about the relationship between two variables, and that may be all that you need.  
+\end{singlespace}
+
+\section{{\textbf{Situating your research question in relation to extant research}}}
+\begin{singlespace}
+This is important since you are being asked to use research, relevant to your topic, to develop an original research question. Note that in an ``introduction'' section, you are using readings to set up a question, rather than to develop hypotheses. In the example above (the \href{http://asr.sagepub.com/content/79/4/630.full.pdf}{Tea Party paper}), note the way in which the authors are using articles and books in the academic literature to set up the question rather than to theorize the question (development of a theoretical argument and hypotheses come later in the paper? and are not included in the introduction section). I know from past experience that this is something that students struggle with (they jump too quickly to theorizing or providing a literature review).  You should be thinking along the lines of the following: 
+\begin{itemize}
+\item What kind of question is this? 
+\item What broader process does it exemplify? 
+\item What will be question contribute to this broader literature that is different from what is already in the literature?
+\end{itemize}
+\end{singlespace}
+
+\section{{\textbf{Situating your research question in its historical and/or cultural context}}}
+\begin{singlespace}
+If the reader is to fully appreciate the significance of your research question, it is almost always necessary to provide background information. Do not assume that your readers are already familiar with your general topic. In the \href{http://asr.sagepub.com/content/79/4/630.full.pdf}{Tea Party paper}, for example, notice how the authors provided some historical background regarding the Tea Party movement and also some actual descriptive data that draws attention to the substantive puzzle. Note that the introduction section sets up an interesting substantive puzzle:
+\begin{itemize}
+\item Why was the Tea Party so popular when it was calling for the government to do nothing at a time when the nation was in the midst of a severe economic crisis? 
+\item Do patterns of residential segregation (by education) help us to understand this puzzling phenomenon?
+\end{itemize}
+\end{singlespace}
+
+
+\newpage
+\section*{\center Example Introduction}
+%\subsection*{Introduction}
+People participate in social movement activity for various reasons. For some, a shared sense of identity makes them feel connected to a social movement (Corrigall-Brown et al. 2009; Futrell and Simi 2004), for others, being available for participation increases their likelihood of participation (McAdam 1986). Who you know, or the ties you have to people in your social network might be an important yet overlooked factor for understanding participation (Beyerlein and Hipp 2006). For example, a person might be more likely to engage in civil disobedience if they know someone who is either participating, has heard about, or even organized the event, who has informed them about the event. Understanding the role of political ties to others might shed light on an unexplored area in the study of social movement participation.
+
+\end{document}
+
