@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{amssymb,amsmath,tabu}
+\usepackage{hyperref}
+\usepackage[super]{nth}
+\setlength\parindent{0pt}
+\usepackage[english]{babel}
+
+
+\begin{document}
+\title{Homework 3\\ SOCI 502B: Graduate Statistics (Fall 2017) \\ {\large{10 points}} \\ {\large{Due: December 13, 2017}}}
+\author[*]{}
+\date{}
+\maketitle
+
+
+
+\section*{Overview:}
+In this assignment, you'll be completing 1 problem using SPSS (or R). This problem covers topics from Chapter 11 in your textbook.
+
+\subsection*{Problem 1 (\textit{Analysis of Variance -- ANOVA $F$-Ratio})}
+\begin{itemize}
+\item Using the GSS 2014 data set (\texttt{GSS2014\_final})\footnote{For SPSS, use \texttt{GSS2014\_final.sav}. For R, use the R script and \texttt{GSS2014\_final.csv}}, report the means and standard deviations of ``political (conservative) views'' (\texttt{polviews}) for each racial category (\texttt{race}).
+\begin{itemize}
+\item \texttt{race} should be valued as: 1 -- ``white''; 2 -- ``black''; 3 -- ``other''
+\item \texttt{polviews} should be changed to scale measure
+\end{itemize}
+\item Display a means plot for ``political (conservative) views'' (\texttt{polviews}) for each racial category (\texttt{race}).
+\item Report the between-group and within-group degrees of freedom for the bivariate relationship between the ``race'' variable (\texttt{race}) and the ``political (conservative) views'' variable (\texttt{polviews}). 
+\item Report the mean-square between and mean-square within (error).
+\item What is the value of the $F$ statistic? 
+\item Correctly and fully report and interpret the $F$ statistic (using the example from our lecture slides, including the $F$ value, the degrees of freedom, and the p-value)
+\item Based on the means reported above, which group(s) has higher conservativeness scores?
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
