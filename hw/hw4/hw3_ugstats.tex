@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} %hyperref 
+\usepackage{array}
+\usepackage{amssymb,amsmath,tabu}
+\usepackage{hyperref}
+\setlength\parindent{0pt}
+\usepackage[english]{babel}
+
+
+\begin{document}
+\title{Homework 3}
+\author[*]{}
+\date{}
+\maketitle
+
+
+
+\section*{Overview:}
+In this assignment, you'll be using R/RStudio and the GSS data set (2014) to report bivariate statistics for two dependent variables of interest. These variables must be different than the ones I present in the example below (unless you've discussed it with me). Remember, I want you to select variables that interest you, that way you could use these analyses for your final paper. Finally, the only bivariate relationship you will report for this analysis is either a {\bf{chi-square}} test, a {\bf{t-test}}, an {\bf{analysis of variance (ANOVA)}}, or {\bf{correlation}} between two variables.
+
+\subsection*{What you will need:}
+The following can be downloaded from our course website
+\begin{itemize}
+\item \textbf{hw3\_script.R}
+\item \textbf{GSS2014\_final.csv} aka GSS Data Set (2014)
+\item \textbf{LABELS\_script.R}
+\item \textbf{GSS Variables and Descriptions.pdf}
+\item \textbf{GSS\_Codebook.pdf}
+\end{itemize}
+
+
+\subsection*{Tasks:}
+\begin{itemize}
+\item Open up the Homework 3 script/code file (\textbf{hw4\_script.R}). This is the file you'll be working from.
+\item Set your working directory
+\item Load the required packages/libraries
+\item Load the data set (\textbf{GSS2014\_final.csv}).
+\item Load the cleaner/labels file (\textbf{LABELS\_script.R}).
+\item Select two (2) variables that interest you. This can be 1) two categorical variables, 2) a categorical variable with two categories (e.g. sex) and an interval/continuous variable, 3) a categorical variable with more than two categories (e.g. race or religion) and an interval/continuous variable, or 4) two interval/continuous variables. To do so, you will need to look through the list of variables (\textbf{GSS Variables and Descriptions.pdf}). Once you've selected two variables, locate them in the codebook (\textbf{GSS\_Codebook.pdf}) to figure out how those variables are coded.
+\end{itemize}
+
+
+\subsection*{What you will turn in:}
+\begin{itemize}
+\item A brief paragraph describing:
+	\begin{itemize}
+	\item A sentence or two about the data set you're using for these variables.
+	\item For each variable, a sentence or two describing the variable name and its description.
+	\end{itemize}	
+\item A bivariate relationship between the variables, and a description/interpretation of the relationship. Remember the following, use a:
+	\begin{itemize}
+	\item \textbf{Chi-Square} if you have two categorical/discrete variables
+	\item \textbf{T-test} if you have a categorical variable with two categories (e.g. sex) and an interval/continuous variable
+	\item \textbf{ANOVA} if you have a categorical variable with more than two categories (e.g. race or religion) and an interval/continuous variable
+	\item \textbf{Correlation} if you have two interval/continuous variables
+	\end{itemize}
+
+\item The text of your R code/script on a separate page.
+\end{itemize}
+
+\newpage
+\section*{\center Example Homework 3}
+
+\subsection*{1: Data Set Description}
+The data for this assignment come from the General Social Survey administered in 2014. The data set has 2,538 observations, with individuals as the unit of analysis. \newline
+
+\subsection*{2: Variable Descriptions}
+The two outcome variables I selected were \textbf{POLVIEWS} and \textbf{OPPSEGOV}. The variable \textbf{POLVIEWS} is a continuous measure of conservatism that ranges from 1 to 7, with higher scores on this variable indicating higher levels of conservatism. The text of the variable is as follows:
+\begin{quote}
+``We hear a lot of talk these days about liberals and conservatives. I'm going to show you a seven-point scale on which the political views that people might hold are arranged from extremely liberal--point 1--to extremely conservative-- point 7. Where would you place yourself on this scale?''
+\end{quote}
+
+The variable \textbf{OPPSEGOV} is a continuous measure on the importance of civil disobedience that ranges from 1 to 7, with higher scores indicating that the respondent believes civil disobedience is more important. The text of the variable is as follows:
+\begin{quote}
+``That citizens may engage in acts of civil disobedience when they oppose government actions.''\newline
+\end{quote}
+
+
+
+\subsection*{3: Bivariate Description}
+
+{\it{Note: Based on your tests, report one of the following:}}\newline
+
+Chi Square: {\it{if you have two discrete/categorical variables}} \newline \newline
+The chi square test between \textbf{RACDIF4} and \textbf{RACE} shows that there is a significant relationship between racial categories and beliefs about the causes of racial inequality: \textbf{$X^2$ = 10.902, $p$ $< $ .01}. This indicates that racial groups differ on their belief about whether or not a ``lack of motivation'' is what leads to Black inequality. Those who identify as Other are more likely to believe that Blacks just don't have the motivation to pull themselves out of poverty. \newline
+
+T-test: {\it{if you have one categorical variable with two categories (e.g. sex) and one interval/continuous variable}} \newline \newline
+The t-test between \textbf{POLVIEWS} and \textbf{SPKATH} shows that there is a non-significant mean difference in political views by whether or not people believe that Atheists should be allowed to speak: \textbf{$t$ = -2.8515, $p$ $< $ .01}. This indicates that those who believe that Atheists should be allowed to speak in their community differ on their level of conservatism. Those who don't think Atheists should be allowed to speak ($M$ = 4.268882, $SD$ = 1.336061) have higher mean/average conservatism (higher values on \textbf{POLVIEWS}) than those who think Atheists have the right to speak.\newline
+
+ANOVA: {\it{if you have one categorical variable with more than two categories (e.g. religion) and one interval/continuous variable}} \newline \newline
+The analysis of variance between \textbf{POLVIEWS} and \textbf{RACE} shows that there is a significant mean difference in political views for different races: \textbf{$F$ = 18.46, $p$ $< $ .001}. This indicates that different racial categories are more conservative than others. White people ($M$ = 4.170572, $SD$ = 1.458553) have higher mean/average conservatism (higher values on \textbf{POLVIEWS}) than those who identify as Black or Other.\newline
+
+Correlation: {\it{if you have two interval/continuous variables}} \newline \newline
+The correlation between \textbf{POLVIEWS} and \textbf{OPPSEGOV} is \href{http://www.psychology.emory.edu/clinical/bliwise/Tutorials/SCATTER/scatterplots/effect.htm}{weak}, negative, and significant: \textbf{$r$ = -.1659262, $p$ $< $.001}. This indicates that as one variable increases, the other decreases. People with higher levels of conservatism (i.e. higher values of \textbf{POLVIEWS}) believe that it is an important right for citizens to engage in civil disobedience when they oppose government actions (i.e. lower levels of \textbf{OPPSEGOV}).\newline
+
+\newpage
+
+\subsection*{4: R Code/Script for Homework 3}
+\begin{verbatim}
+setwd("/Users/burrelvannjr/Dropbox/methods_csuf")
+
+library(psych)
+library(Hmisc)
+library(RCurl)
+
+DATA1<-read.csv("resources/data/GSS2014_cleaned_nm.csv",header=TRUE,sep=",")
+source("resources/data/LABELS_script.R")
+
+DATA1$polviews
+DATA1$oppsegov
+
+cor.test(DATA1$polviews, DATA1$oppsegov)
+
+\end{verbatim}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

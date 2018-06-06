@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{authblk} %package for blocking authors, followed by blocking affiliation
+\usepackage{url}
+\usepackage{ulem} % when using ulem package, must change \emph to \it for italics.
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{amssymb,amsmath,tabu}
+\usepackage{hyperref}
+\usepackage[super]{nth}
+\setlength\parindent{0pt}
+\usepackage[english]{babel}
+
+
+\begin{document}
+\title{Homework 6\\ SOCI 502B: Graduate Statistics (Fall 2017) \\ {\large{10 points}} \\ {\large{Due: December 13, 2017}}}
+\author[*]{}
+\date{}
+\maketitle
+
+
+
+\section*{Overview:}
+In this assignment, you'll be completing 1 problem using SPSS (or R). This problem covers topics from Chapter 19 in your textbook.
+
+\subsection*{Problem 1 (\textit{Logistic Regression})}
+\begin{itemize}
+\item Using the GSS 2014 data set (\texttt{GSS2014\_final})\footnote{For SPSS, use \texttt{GSS2014\_final.sav}. For R, use the R script and \texttt{GSS2014\_final.csv}}, conduct a multivariate logistic regression analysis of how a person's ``political (conservative) views'' (\texttt{polviews}), and their race (\texttt{race}) influence their ``beliefs about racial inequality'' variable (\texttt{racdif4}).\footnote{The survey question reads: ``On the average (Negroes/Blacks/African-Americans) have worse jobs, income, and housing than white people. Do you think these differences are... because most (Negroes/Blacks/African-Americans) just don't have the motivation or will power to pull themselves up out of poverty?''}
+\item You will need to run two separate models: The first with only \texttt{race} in the model as the IV, and the second (full model) with both \texttt{race} and \texttt{polviews} to the subsequent model.
+\item First, recode the variables as such:
+\begin{itemize}
+\item \texttt{racdif4} is racial inequality: 1 = racial inequality because blacks lack motivation; 0 = racial inequality \textbf{NOT} because blacks lack motivation
+\item \texttt{race} is race: 1 = white; 0 = non-white
+\end{itemize}
+\item In the full multivariate logistic regression model, what is the value of the Nagelkerke's $R^{2}$ (our psuedo-$R^{2}$) coefficient? How does it change from the first model?
+\item In the full multivariate logistic regression model, what is the value of the $-2LL$ statistic? How does it change from the first model?
+\item In the full multivariate logistic regression model, what is the value of the $X^{2}$ statistic? How does it change from the first model?
+\item Correctly and fully report and interpret the full model statistics. Include variance explained (Nagelkerke's $R^{2}$, with interpretation), model fit ($X^{2}$ and $-2LL$, with interpretation), and the values (odds ratios) and significance of each independent variable.\\
+\item Next, run the full model with race dummy coded:
+\begin{itemize}
+\item \texttt{black} = 1 and everything else is 0
+\item \texttt{other} = 1 and everything else is 0
+\end{itemize}
+\item How do the model fit statistics ($X^{2}$ and $-2LL$) differ between the regular \texttt{race} model and the dummy coded race (\texttt{black} and \texttt{other}) model?
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
